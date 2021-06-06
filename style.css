@@ -163,6 +163,7 @@ main > div > div > div:nth-child(1) > ul > li::before {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      
   }
   footer h6{
       color: white;
