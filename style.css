@@ -44,7 +44,8 @@ body > header > div>nav{
 body > header > div>nav>ul{
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    min-width: 70%;
 }
 body > header > div>nav>ul>li{
     padding: 1.3rem 0.5rem;
@@ -64,25 +65,25 @@ body > header > div>nav>ul>li:hover{
 .active{
     background-color: #0d66a5;
 }
-main div{
+main>div div{
     background-color: white;
 }
-body > main > div > div{
+body > main>div > div > div{
     padding: 1.5rem;
 }
-body > main > div > div > div:nth-child(1) > h2:nth-child(4){
+body > main>div > div > div > div:nth-child(1) > h2:nth-child(4){
     color: #1293ee;
 }
- main > div > div > div:nth-child(1) > h2:nth-child(1){
+ main>div > div > div > div:nth-child(1) > h2:nth-child(1){
     margin-bottom: 1.5rem;
     font-size: 1.2rem;
 }
-body > main > div > div > div:nth-child(1) > p{
+body > main>div > div > div > div:nth-child(1) > p{
     line-height: 1.7em;
     font-size: 0.9rem;
 font-weight:600;
 }
-body > main > div > div > div:nth-child(1) > p> a{
+body > main>div > div > div > div:nth-child(1) > p> a{
     color:#cc00d3;
     text-decoration: underline;
     
@@ -90,47 +91,50 @@ body > main > div > div > div:nth-child(1) > p> a{
 body > main > div > div > div:nth-child(1) > div{
     font-size: 0.8rem;
 }
-main > div > div > div:nth-child(1) > ul > li{
+main>div > div > div > div:nth-child(1) > ul.browser-list > li{
     list-style: none;
     margin: 0.5rem;
-    margin-left: 5%;
+    margin-left: 0;
     font-size: 0.8rem;
 
 }
-main > div > div > div:nth-child(1) > ul > li::before {
+
+main>div > div > div > div:nth-child(1) > ul > li::before {
     content: "\2022";  
     color: #1293ee;
     font-weight: bold; 
     display: inline-block;
     width: 1em; 
-    margin-left: -1em; 
+    margin-left: 1px; 
   }
-  main > div > aside > div{
+  main>div > div > aside > div{
       padding :1.5rem;
   }
-  body > main > div > aside > div > h6:nth-child(3) > span{
+  body > main>div > div > aside > div > h6:nth-child(3) > span{
      
     color:#1293ee;
     
 
   }
-  body > main > div > aside > div > h6:nth-child(5) > a{
+  body > main>div > div > aside > div > h6:nth-child(5) > a{
       color:#cc00d3;
   }
-  main > div > aside > div:nth-child(3) > ul > li{
+  main>div > div > aside > div:nth-child(3) > ul > li{
       list-style: none;
     
   }
-  body > main > div > aside > div:nth-child(3) > ul > li> a{
+  body > main>div > div > aside > div:nth-child(3) > ul > li> a{
       color: #cc00d3;
       margin:0 10px;
       font-size: 0.8em;
   }
   @media screen and (min-width:700px){
+      .footer-wrap{
+          margin: 0 10%;
+      }
       .main-wrapper{
           display: flex;
-          margin: 0 10%;
-         
+          margin: 0;
           
       }
       .branding{
@@ -141,7 +145,7 @@ main > div > div > div:nth-child(1) > ul > li::before {
           margin-top: 4rem;
       }
       aside{
-          width: 20%;
+          min-width: 30%;
       }
       header .branding h1,header .branding h6{
           text-align: left;
@@ -155,7 +159,7 @@ main > div > div > div:nth-child(1) > ul > li::before {
   body{
       background-color:#eeeefe;
   }
-  footer{
+  .footer-wrap .footer{
       width: 100%;
       height: 6.5rem;
       background-color: #1293ee;
@@ -163,9 +167,10 @@ main > div > div > div:nth-child(1) > ul > li::before {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+     
       
   }
-  footer h6{
+  .footer-wrap .footer h6{
       color: white;
       text-align:center ;
       letter-spacing: 0.1rem;
